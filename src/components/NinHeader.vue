@@ -6,10 +6,10 @@
       <td>
         <img :src="nin_logo" class="nin_logo"/>
       </td>  
-      <td v-for="(i,index) of items" :key="index" 
-      @click="show1 = !show1">{{i}}
+      <td v-for="(i,index) of items" :key="index" @click="show1 = !show1"  @mousemove="addClass" @mouseleave="addClass1">
+     {{i}}
       </td>  
-      <td><a href="">英语</a>
+      <td><a href="http://www.nintendo.com">英语</a>
         </td>
     </tr>  
   </table>
@@ -48,7 +48,14 @@ export default {
     }
   },
   methods:{
-    
+   addClass(e){
+     e.stopPropagation();
+     e.target.className='clickNow';
+   },
+   addClass1(e){
+     e.target.className='';
+    //  console.log(e.target);
+   },
   },
   created(){
     this.$axios.get(this.$store.state.globalSettings.apiUrl+'index_bottom').then((result)=>{
@@ -94,6 +101,13 @@ export default {
             font-size: 14px;
             font-weight: bold;
           }
+          a{
+            text-decoration-line: none;
+            color: #000;
+            &:hover{
+              color: #e60012;
+            }
+          }
         }
       }
     }
@@ -123,11 +137,14 @@ export default {
     right:350px;
     }
   }
+  .clickNow{
+    border-top: 5px solid #e60012;
+  }
   .transition-box {
     width: 100%;
     height: 200px;
     border-radius: 4px;
-    background-color: #e60012;
+    background-color: #fff;
     text-align: center;
     color: #000;
     padding: 40px 20px;
