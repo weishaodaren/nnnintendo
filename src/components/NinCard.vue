@@ -42,9 +42,10 @@ export default {
                td{
                 text-align: center;
                 width:250px;
-                border-right: 1px dotted #e8e8e8;
-                border-left: 1px dotted #e8e8e8;
+                border-right: 3px dotted #e8e8e8;
+                border-left: 3px dotted #e8e8e8;
                 padding:1%;
+                 border-bottom:1px solid #e8e8e8;
                 a{
                     text-decoration-line: none;
                    img{
