@@ -7,7 +7,7 @@
           <el-col :sm=12 :md=8 :lg=6 
           v-for='(i,index) of items.slice(5,13)' :key='index'
           @mousemove="nin_move(index)" 
-          :class="{'nin_bind_style':ind==index}">
+          :class="{'nin_bind_style':isA==index}">
             <div>
               <img :src="i.imgUrl"/>
                <h6>{{i.tname}}</h6> 
@@ -17,9 +17,9 @@
             </div>
           </el-col>             
         </el-row>
-        <p class="nin_title"> 
+        <!-- <p class="nin_title"> 
           TOPICS 
-        </p>
+        </p> -->
         <hr>
     </div>
 </template>
@@ -30,12 +30,12 @@ export default {
       return{
         items:[],
         Gamer:'Nintendo Switch',
-        ind:''
+        isA:''
       }
     },
     methods:{
       nin_move:function(index){
-        this.ind=index;
+      
       }
     },
     created(){
@@ -93,18 +93,5 @@ export default {
   h6{
     color:#e60012;
   }
-}
-.nin_title{
-  color:#fff;
-  font-weight: bolder;
-  text-align: center;
-  line-height: 50px;
-  border-radius:46px;
-  width:200px;
-  height:50px;
-  background: #e60012;
-  float:left;
-  margin-left:17rem;
-  margin-bottom: 20px;
 }
 </style>
