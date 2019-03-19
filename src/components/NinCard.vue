@@ -22,7 +22,6 @@ export default {
     },
     created(){
         this.$axios.get(this.$store.state.globalSettings.apiUrl+'index_top').then((res)=>{
-            console.log(res.data)
             this.nin_card=res.data
         }).catch((err)=>{
             console.log(err)
