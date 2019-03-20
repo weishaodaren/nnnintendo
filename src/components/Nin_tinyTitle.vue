@@ -1,8 +1,8 @@
 <template>
     <div class="nin_tinyTitle">
-        <h2>最新话题</h2>
+        <h2>最新游戏软件</h2>
         <h1>-</h1>
-        <h5>TOPICS</h5>
+        <h5>NEW RELEASE</h5>
     </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .nin_tinyTitle{
-        margin-top: 40px;
+        margin-top:30rem;
         h2{
             text-align: center;
             opacity: 0.8;

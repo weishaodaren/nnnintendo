@@ -4,7 +4,9 @@
     <nin-carousel></nin-carousel>
     <nin-card></nin-card>
     <nin-topics></nin-topics>
-    <nin-games></nin-games>
+    <!-- <nin-games></nin-games> -->
+    <nin-tinyTitle></nin-tinyTitle>
+    <nin-lastest></nin-lastest>
   </div>
 </template>
 
@@ -13,7 +15,10 @@ import NinHeader from '../components/NinHeader.vue';
 import NinCarousel from '../components/NinCarousel.vue';
 import NinCard from '../components/NinCard.vue';
 import NinTopics from '../components/NinTopics.vue';
-import NinGames from '../components/NinGames.vue';
+// import NinGames from '../components/NinGames.vue';
+import NinTinyTitle  from '../components/Nin_tinyTitle.vue';
+import NinLastest  from '../components/NinLastest.vue';
+import NinLastestVue from '../components/NinLastest.vue';
 
 export default {
   data(){
@@ -26,7 +31,9 @@ export default {
     'nin-carousel':NinCarousel,
     'nin-card':NinCard,
     'nin-topics':NinTopics,
-    'nin-games':NinGames
+    // 'nin-games':NinGames,
+    'nin-tinyTitle':NinTinyTitle,
+    'nin-lastest':NinLastestVue
   }
 }
 </script>

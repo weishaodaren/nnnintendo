@@ -17,10 +17,9 @@
             </div>
           </el-col>             
         </el-row>
-        <!-- <p class="nin_title"> 
-          TOPICS 
-        </p> -->
-        <hr>
+        <label class='nin_title_o'> 
+          TOPICS
+        </label>
     </div>
 </template>
 
@@ -48,7 +47,7 @@ export default {
 
 <style lang="scss">
     .nin_topics{
-        margin-top: 40px;
+        margin-top: 80px;
         h2{
             text-align: center;
             opacity: 0.8;
@@ -91,5 +90,21 @@ export default {
             opacity: 0.7;
             font-size: 10px;
             color:black
+    }
+     .nin_title_o{
+         color:#fff;
+        font-weight: bolder;
+        text-align: center;
+        line-height: 50px;
+         border-radius:46px;
+         width:200px;
+         height:50px;
+         background: #e60012;
+         float:left;
+        margin-left: 41rem;
+        margin-top: 1rem;
+         @media screen and (max-width:800px) {
+            
+         }
     }
 </style>

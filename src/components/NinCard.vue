@@ -10,6 +10,7 @@
                 </td>
             </tr>
         </table>
+       
     </div>
 </template>
 
@@ -43,12 +44,12 @@ export default {
                 width:250px;
                 border-right: 3px dotted #e8e8e8;
                 border-left: 3px dotted #e8e8e8;
-                padding:1%;
+                padding:2%;
                  border-bottom:1px solid #e8e8e8;
                 a{
                     text-decoration-line: none;
                    img{
-                    width:10%;
+                    width:15%;
                     cursor: pointer;
                    }
                    span{
@@ -71,4 +72,5 @@ export default {
            }
        }
    }
+   
 </style>
