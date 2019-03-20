@@ -89,7 +89,7 @@ export default {
       table{
         tr{
           background: #fff;
-          height:80px;
+          height:100px;
           cursor: pointer;
           td{
             &:first-of-type{
@@ -138,7 +138,7 @@ export default {
     }
   }
   .clickNow{
-    border-top: 5px solid #e60012;
+    border-bottom: 5px solid #e60012;
   }
   .transition-box {
     width: 100%;
