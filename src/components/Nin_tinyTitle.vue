@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss">
 .nin_tinyTitle{
-        margin-top:30rem;
+        margin-top:5rem;
         h2{
             text-align: center;
             opacity: 0.8;
