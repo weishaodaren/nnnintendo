@@ -3,12 +3,18 @@
     <nin-header></nin-header>
     <nin-carousel></nin-carousel>
     <nin-card></nin-card>
+
+
     <nin-topics></nin-topics>
     <nin-click-all></nin-click-all>
     <nin-tinyTitle></nin-tinyTitle>
     <nin-lastest></nin-lastest>
     <nin-clickAll-b></nin-clickAll-b>
+    <!--  -->
+   <nin-rates></nin-rates>
+ 
     <nin-bottom></nin-bottom>
+    <nin-bread></nin-bread>
   </div>
 </template>
 
@@ -24,6 +30,8 @@ import NinLastestVue from '../components/NinLastest.vue';
 import NinClickAll from '../components/NinClickAll.vue';
 import NinClickAll_b from '../components/NinClickAll_b.vue';
 import NinBottom from '../components/NinBottom.vue';
+import NinBread from '../components/NinBread.vue';
+import NinRates from '../components/NinRates.vue';
 
 export default {
   data(){
@@ -41,7 +49,9 @@ export default {
     'nin-lastest':NinLastestVue,
     'nin-click-all':NinClickAll,
     'nin-clickAll-b':NinClickAll_b,
-    'nin-bottom':NinBottom
+    'nin-bottom':NinBottom,
+    'nin-bread':NinBread,
+    'nin-rates':NinRates
   }
 }
 </script>

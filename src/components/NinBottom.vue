@@ -15,7 +15,7 @@
             </div>
             <table class="nin_ad">
                 <tr>
-                    <td>{{name}}</td>
+                    <td class='nin_head_name'>{{name}}</td>
                     <td v-for="(i,o) in social.slice(3)" :key='o'>
                         <img :src="i.imgUrl"/>
                         <span>{{i.toolName}}</span>
@@ -42,7 +42,7 @@ export default {
             console.log(err);
         }),
          this.$axios.get(this.$store.state.globalSettings.apiUrl+'index_bottom').then((res)=>{
-            console.log(res.data);
+            // console.log(res.data);
             this.social=res.data;
         }).catch((err)=>{
             console.log(err);
@@ -54,7 +54,8 @@ export default {
 <style lang="scss">
     .nin-bottom{
         margin-top: 10rem;
-        border: 2px solid #e8e8e8;
+        border-top: 2px solid #e8e8e8;
+        // border: 2px solid #e8e8e8;
         table{
             tr{
                 td{
@@ -72,6 +73,8 @@ export default {
                         opacity: 0.7;
                         font-size: 12px;
                         margin-left: 10rem;
+                    }:hover{
+                        color: #e60012;
                     }
                 }
             }
@@ -96,14 +99,19 @@ export default {
                     width:40px;
                     height:40px;
                     position: relative;
-                    left: 280px;
+                    left: 165px;
                     top: 15px;
                     border-radius: 8px;
-                    span{
-
-                    }
                 }
             }
         }
+    }
+    .nin_head_name{
+        // font-weight: bolder;
+        color:#000;
+        margin-left: 25px;
+        position: relative;
+        left: 88px;
+        top: 10px;
     }
 </style>
