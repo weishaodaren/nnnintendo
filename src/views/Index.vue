@@ -7,6 +7,8 @@
     <nin-click-all></nin-click-all>
     <nin-tinyTitle></nin-tinyTitle>
     <nin-lastest></nin-lastest>
+    <nin-clickAll-b></nin-clickAll-b>
+    <nin-bottom></nin-bottom>
   </div>
 </template>
 
@@ -20,6 +22,8 @@ import NinTinyTitle  from '../components/Nin_tinyTitle.vue';
 import NinLastest  from '../components/NinLastest.vue';
 import NinLastestVue from '../components/NinLastest.vue';
 import NinClickAll from '../components/NinClickAll.vue';
+import NinClickAll_b from '../components/NinClickAll_b.vue';
+import NinBottom from '../components/NinBottom.vue';
 
 export default {
   data(){
@@ -35,7 +39,9 @@ export default {
     // 'nin-games':NinGames,
     'nin-tinyTitle':NinTinyTitle,
     'nin-lastest':NinLastestVue,
-    'nin-click-all':NinClickAll
+    'nin-click-all':NinClickAll,
+    'nin-clickAll-b':NinClickAll_b,
+    'nin-bottom':NinBottom
   }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <el-carousel :interval="3500" height="500px">
+  <el-carousel :interval="3000" height="500px">
     <el-carousel-item v-for="(item,index) in nin_carousel" :key="index">
       <img :src="item.imgUrl"/>
     </el-carousel-item>
