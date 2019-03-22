@@ -31,7 +31,7 @@
     methods: {
       loadAll() {
         this.$axios.get(this.$store.state.globalSettings.apiUrl+'index_select').then((res)=>{
-          console.log(res.data);
+          // console.log(res.data);
           this.restaurants=res.data;
         }).catch((err)=>{
           console.log(err);

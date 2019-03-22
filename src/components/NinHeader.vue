@@ -38,6 +38,7 @@ export default {
         "Nintendo eShop",
         "客户服务"
       ],
+      nin_svg:[],
       show1:false,
       nin_title:[],
       nin_msg:[
@@ -70,7 +71,6 @@ export default {
     }).catch((err)=>{
       console.log(err);
     })
-    
   }
 }
 </script>
