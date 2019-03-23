@@ -1,6 +1,6 @@
 <template>
   <div class="nin_about">
-    <nin-store-head></nin-store-head>
+    <!-- <nin-store-head></nin-store-head> -->
     <!--  -->
     <nin-store></nin-store>
     <nin-store-bottom></nin-store-bottom>
