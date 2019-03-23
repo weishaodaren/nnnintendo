@@ -8,7 +8,7 @@
           v-for='(i,index) of items.slice(5,13)' :key='index'>
             <div> 
               <a href="javascript:;">
-              <img :src="i.imgUrl"/>
+              <img :src="i.imgUrl" @click='gogogogo'/>
                <h6>{{i.tname}}</h6> 
                </a>
                <br><br>
@@ -28,8 +28,8 @@ export default {
       }
     },
     methods:{
-      nin_move:function(){
-      
+      gogogogo:function(){
+        this.$router.push({path:'/about'});
       }
     },
     created(){

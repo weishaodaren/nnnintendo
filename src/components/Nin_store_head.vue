@@ -22,7 +22,6 @@
       <template slot="title">客户信息</template>
       <el-menu-item index="2-2-1">新人注册</el-menu-item>
       <el-menu-item index="2-2-2">登录</el-menu-item>
-      <el-menu-item index="2-2-3">选项3</el-menu-item>
     </el-submenu>
   </el-submenu>
   <span>Nintendo Switch</span>
