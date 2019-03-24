@@ -3,7 +3,7 @@
     <nin-store-head></nin-store-head>
     <nin-store></nin-store>
     <nin-store-detail></nin-store-detail>
-    <!-- <nin-store-bottom></nin-store-bottom> -->
+    <nin-store-bottom></nin-store-bottom>
   </div>
 </template>
 

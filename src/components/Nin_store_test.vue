@@ -16,7 +16,7 @@
                  <span>{{game_date}}</span>
              </p>
              <p>我们将在交货开始日前一天通过电子邮件通知您更换号码。 要下载内容，您需要Nintendo Switch和Internet环境。</p>
-             <el-input-number size="mini" :min="1" :max="3" v-model="num"></el-input-number>
+             <el-input-number size="mini" :min="1" :max="5" v-model="num"></el-input-number>
             <a href="javascript:;" class="cart">购买/添加购物车</a>
             <img :src="fav"/>
          </div>
