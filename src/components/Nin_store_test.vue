@@ -1,7 +1,7 @@
 <template>
   <div class="block">
          <el-carousel indicator-position="outside" :interval="5000">
-             <el-carousel-item v-for="(item,index) in nin_games" :key="index">
+             <el-carousel-item v-for="(item,index) in nin_games.slice(0,5)" :key="index">
                 <img :src="item.gameUrl"/>
          </el-carousel-item>
          </el-carousel>
@@ -17,7 +17,7 @@
              </p>
              <p>我们将在交货开始日前一天通过电子邮件通知您更换号码。 要下载内容，您需要Nintendo Switch和Internet环境。</p>
              <el-input-number size="mini" :min="1" :max="5" v-model="num"></el-input-number>
-            <a href="javascript:;" class="cart">购买/添加购物车</a>
+            <a @click="jump_cart" class="cart">购买/添加购物车</a>  <!--后续 路由传参-->
             <img :src="fav"/>
          </div>
   </div>
@@ -38,6 +38,11 @@ export default {
             game_date:'预定于2019年8月20日交付*仅限国内送货',
             num:1
 
+        }
+    },
+    methods:{
+        jump_cart(){
+            this.$router.push({path:'cart'})
         }
     },
     created(){
@@ -134,5 +139,6 @@ export default {
         display: inline-block;
         margin-left: 50px;
         font-weight: bolder;
+        cursor: pointer;
     }
 </style>

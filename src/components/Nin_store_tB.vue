@@ -152,7 +152,7 @@ export default {
         }
         :nth-child(10){
             margin-top: 15px;
-            margin-bottom: 30px;
+            margin-bottom: 90px;
         }
     }
 </style>
