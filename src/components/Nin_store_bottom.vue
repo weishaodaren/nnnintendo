@@ -1,7 +1,8 @@
 <template>
     <div class='nin_store_bottom'>
         <div>
-            <a href=""><h6 v-for='(item,index) of title' :key='index'>{{item}}</h6></a>
+            <a href=""><h6 v-for='(item,index) of title' :key='index'>
+                {{item}}</h6></a>
             <p style='height:20px'></p>
             <p>©Nintendo</p>
             <p>China</p>

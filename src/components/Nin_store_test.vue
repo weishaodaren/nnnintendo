@@ -54,6 +54,7 @@ export default {
 <style lang='scss'>
     .block{
         width: 500px;
+        height: 520px;
         position: relative; 
         left: 275px;
         top: 100px; 
