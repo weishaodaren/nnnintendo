@@ -6,14 +6,14 @@
          </el-carousel-item>
          </el-carousel>
          <div class="game_p">
-             <span>{{game_status}}</span>
+             <span>商店限量</span>
              <p class="g_title">{{game_title}}</p>
-             <p>{{game_compy}}</p>
-             <p>{{game_money}}</p>
-             <p>{{game_cost}}</p>
+             <p>任天堂</p>
+             <p>￥{{game_money}}</p>
+             <p>根据预订接受免运费</p>
              <p>
                  <img class='lorry' :src="img_url"/>
-                 <span>{{game_date}}</span>
+                 <span>预定于2019年8月20日交付*仅限国内送货</span>
              </p>
              <p>我们将在交货开始日前一天通过电子邮件通知您更换号码。 要下载内容，您需要Nintendo Switch和Internet环境。</p>
              <el-input-number size="mini" :min="1" :max="5" v-model="num"></el-input-number>
@@ -28,14 +28,10 @@ export default {
     data(){
         return{
             nin_games:[],
-            game_status:'商店限量',
             game_title:'ASTRAL CHAIN下载版（带包）',
-            game_compy:'任天堂',
-            game_money:'￥525.00 人民币',
-            game_cost:'根据预订接受免运费',
+            game_money:'525.00 人民币',
             img_url:require('../assets/img/lorry.png'),
             fav:require('../assets/img/fav.png'),
-            game_date:'预定于2019年8月20日交付*仅限国内送货',
             num:1
 
         }

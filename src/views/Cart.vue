@@ -2,7 +2,7 @@
   <div class="nin_cart">
     <nin-store-head></nin-store-head>
     <nin-cart></nin-cart>
-    <!-- <nin-store-bottom></nin-store-bottom> -->
+    <nin-store-bottom></nin-store-bottom>
   </div>
 </template>
 

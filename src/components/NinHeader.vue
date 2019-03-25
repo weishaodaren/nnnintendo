@@ -32,11 +32,11 @@ export default {
     return{
       nin_logo:"",
       items:[
-        "主机·amiibo",
-        "游戏软件",
-        "TOPICS",
-        "Nintendo eShop",
-        "客户服务"
+        "🔮主机·amiibo",
+        "🎫游戏软件",
+        "👥TOPICS",
+        "🛒Nintendo eShop",
+        "🌍客户服务"
       ],
       nin_svg:[],
       show1:false,
