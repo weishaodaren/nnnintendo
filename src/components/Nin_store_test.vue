@@ -37,7 +37,9 @@ export default {
     },
     methods:{
         jump_cart(){
-            this.$router.push({path:'/cart'})
+            var lid=this.$route.params.lid;
+            // console.log(lid)
+            this.$router.push({path:'cart/'+lid})
         }
     },
     created(){

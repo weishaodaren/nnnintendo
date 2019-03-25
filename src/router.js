@@ -11,7 +11,7 @@ export default new Router({
   routes: [
     { path: '/',component: Index },
     { path: '/about/:lid', component: About},
-    { path:'/cart',component:Cart},
+    { path:'/about/cart/:lid',component:Cart},
     { path: '*',component: NotFound }   
   ],
   scrollBehavior (to, from, savedPosition) {

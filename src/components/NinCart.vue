@@ -58,6 +58,10 @@ export default {
         }).catch((err)=>{
             console.log(err)
         })
+    },
+    mounted(){
+        console.log(this.$route.params.id);
+        
     }
 }
 </script>
