@@ -15,9 +15,13 @@ import ninDetail from '../components/Nin_store_tB.vue'
 export default {
   data(){
     return{
-
+     
     }
   },
+   beforeCreate() {
+        // this.$route.params.lid;
+        // console.log(lid)
+      },
   components:{
     'nin-store-head':ninStoreHead,
     'nin-store-bottom':ninStoreBottom,

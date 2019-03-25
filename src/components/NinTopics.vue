@@ -8,7 +8,7 @@
           v-for='(i,index) of items.slice(5,13)' :key='index'>
             <div> 
               <a href="javascript:;">
-              <img :src="i.imgUrl" @click='gogogogo'/>
+              <img :src="i.imgUrl" @click='gogogogo' :data-lid="i.lid"/>
                <h6>{{i.tname}}</h6> 
                </a>
                <br><br>
@@ -28,8 +28,9 @@ export default {
       }
     },
     methods:{
-      gogogogo:function(){
-        this.$router.push({path:'about'});
+      gogogogo:function(e){
+        var id =e.target.dataset.lid
+        this.$router.push({path:'about/'+id});
       }
     },
     created(){

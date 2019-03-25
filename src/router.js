@@ -10,7 +10,7 @@ Vue.use(Router)
 export default new Router({
   routes: [
     { path: '/',component: Index },
-    { path: '/about', component: About},
+    { path: '/about/:lid', component: About},
     { path:'/cart',component:Cart},
     { path: '*',component: NotFound }   
   ],

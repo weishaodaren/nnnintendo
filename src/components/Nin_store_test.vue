@@ -5,11 +5,11 @@
                 <img :src="item.gameUrl"/>
          </el-carousel-item>
          </el-carousel>
-         <div class="game_p">
+         <div class="game_p" v-for="(item,index) in items" :key="index">
              <span>商店限量</span>
-             <p class="g_title">{{game_title}}</p>
+             <p class="g_title">{{item.gameTitle}}</p>
              <p>任天堂</p>
-             <p>￥{{game_money}}</p>
+             <p>￥{{item.gameMoney}}</p>
              <p>根据预订接受免运费</p>
              <p>
                  <img class='lorry' :src="img_url"/>
@@ -28,17 +28,16 @@ export default {
     data(){
         return{
             nin_games:[],
-            game_title:'ASTRAL CHAIN下载版（带包）',
-            game_money:'525.00 人民币',
             img_url:require('../assets/img/lorry.png'),
             fav:require('../assets/img/fav.png'),
-            num:1
+            num:1,
+            items:[]
 
         }
     },
     methods:{
         jump_cart(){
-            this.$router.push({path:'cart'})
+            this.$router.push({path:'/cart'})
         }
     },
     created(){
@@ -48,6 +47,12 @@ export default {
         }).catch((err)=>{
             console.log(err);
         });
+        this.$axios.get(this.$store.state.globalSettings.apiUrl+'about_games_msg').then((res)=>{
+            // console.log(res.data);
+            this.items=res.data;
+        }).catch((err)=>{
+            console.log(err);
+        })
     }
 }
 </script>
@@ -62,6 +67,7 @@ export default {
         img{
             width: 100%;
             height:256px;
+            opacity: 1;
         }
         div{
             span{
