@@ -9,7 +9,7 @@
              <span>商店限量</span>
              <p class="g_title">{{item.gameTitle}}</p>
              <p>任天堂</p>
-             <p>￥{{item.gameMoney}}</p>
+             <p>￥{{(item.gameMoney*num).toFixed(2)}}人民币</p>
              <p>根据预订接受免运费</p>
              <p>
                  <img class='lorry' :src="img_url"/>
@@ -24,13 +24,14 @@
 </template>
 
 <script>
+import {store} from '../router.js'
 export default {
     data(){
         return{
             nin_games:[],
             img_url:require('../assets/img/lorry.png'),
             fav:require('../assets/img/fav.png'),
-            num:1,
+            num:this.$store.state.gameMount,
             items:[]
 
         }
@@ -39,7 +40,7 @@ export default {
         jump_cart(){
             var lid=this.$route.params.lid;
             // console.log(lid)
-            this.$router.push({path:'cart/'+lid})
+            this.$router.push({path:'/cart/'+lid});
         }
     },
     created(){
@@ -55,6 +56,18 @@ export default {
         }).catch((err)=>{
             console.log(err);
         })
+    },
+    mounted(){
+        this.$store.commit('setGameMount')
+    },
+    watch:{
+        $route:{
+            handler(to){
+                this.lid=to.params.lid;
+                // console.log(this.lid)
+            },
+            immediate:true
+        }
     }
 }
 </script>

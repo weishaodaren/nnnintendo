@@ -1,14 +1,14 @@
 <template>
     <div class="nin_cart">
-        <div class="nin_mydiv">
+        <div class="nin_mydiv" v-for="(i,index) in items" :key="index">
         <p>购物车</p>
         <p>{{cart_num}}列</p>  <!--后续 需要实现双向数据绑定-->
         <hr>
         <i @click="cart_delete" class="el-icon-error"></i>
         <div class="nin_img_cart">
             <img :src="nin_img_cart"/>
-            <p>{{game_name}}</p>
-            <span>{{game_money}}</span>
+            <p>{{i.gameTitle}}</p>
+            <span>￥{{i.gameMoney}}</span>
             <p>
                 <img :src="img_lorry"/>
                 {{game_lorry}}
@@ -23,24 +23,25 @@
         </div>
         <div class="right_card">
             <span>总计</span>
-            <span>￥{{game_total}}</span>  <!--后续实现双向数据绑定-->
+            <span>￥{{(num*525).toFixed(2)}}</span>  <!--后续实现双向数据绑定-->
             <p>结算/订购</p>
-            <p>继续购物</p>
+            <p @click="keepon">继续购物</p>
         </div>
+        <el-input-number size="mini" :min="1" :max="5" v-model="num" class="this_po"></el-input-number>
     </div>
 </template>
 
 <script>
+import {store} from '../router.js'
 export default {
     data(){
         return{
             cart_num:'1',
             nin_img_cart:'',
-            game_name:'ASTRAL CHAIN',
-            game_money:'￥525.00人民币',
+            items:[],
             img_lorry:require('../assets/img/lorry.png'),
             game_lorry:'预定于2019年8月20日交付*仅限国内送货',
-            game_total:'525.00'
+            num:this.$store.state.gameMount
         }
     },
     methods:{
@@ -49,6 +50,9 @@ export default {
         },
         handleChange(){
 
+        },
+        keepon(){
+            this.$router.push({path:'/'})
         }
     },
     created(){
@@ -57,11 +61,17 @@ export default {
             this.nin_img_cart=res.data[5].gameUrl
         }).catch((err)=>{
             console.log(err)
+        }),
+        // console.log(this.$route.params.lid);
+        this.$axios.get(this.$store.state.globalSettings.apiUrl+'about_games_msg').then((res)=>{
+            this.items=res.data
+            console.log(res.data);
+        }).catch((err)=>{
+            console.log(err)
         })
     },
-    mounted(){
-        console.log(this.$route.params.id);
-        
+      mounted(){
+        this.$store.commit('setGameMount')
     }
 }
 </script>
@@ -161,7 +171,7 @@ export default {
     }
     :nth-child(2){
         font-weight: bolder;
-        margin-left: 105px;
+        margin-left: 119px;
         font-size: 30px;
     }
     :nth-child(3){
@@ -177,6 +187,7 @@ export default {
         margin-top: 30px;
         margin-bottom: 15px;
         border-radius: 6px;
+        cursor: pointer;
     }
     :nth-child(4){
         width: 200px;
@@ -190,6 +201,13 @@ export default {
         line-height:45px; 
         margin: 0 auto; 
         border-radius: 6px;
+        cursor: pointer;
     }
+ }
+ .this_po{
+     position: relative;
+     left: 38rem;
+     top: -22rem;
+     background: #e60012;
  }
 </style>
